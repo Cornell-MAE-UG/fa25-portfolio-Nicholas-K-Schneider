@@ -268,12 +268,40 @@ image:
 
       <!-- Replace these placeholders with <img> tags in your project -->
       <div class="image-placeholder">
-        <strong>CAD MODEL – OVERALL GEOMETRY</strong>
-        Replace this box with an exported CAD image (e.g., <code>&lt;img src="cad_overview.png" alt="CAD model overview"&gt;</code>).
+        <strong>CAD MODEL – Base & Height of Handle</strong>
+        <figure class="image-block">
+            <img
+                src="/assets/images/Section-1-Base-Section-2-Height.png"
+                alt="Section-1-Base-Section-2-Height"
+            >
+        </figure>
       </div>
       <div class="image-placeholder">
-        <strong>CAD MODEL – DIMENSIONED VIEW</strong>
-        Include a view with all critical dimensions (length <span class="mono">L</span>, width <span class="mono">h</span>, thickness <span class="mono">b</span>, gauge radius <span class="mono">c</span>, etc.).
+        <strong>CAD MODEL – Handle Length (L = 18 in) with 1 inch added</strong>
+        <figure class="image-block">
+            <img
+                src="/assets/images/Section-1-Handle-Length.png"
+                alt="Section-1-Handle-Length"
+            >
+        </figure>
+      </div>
+      <div class="image-placeholder">
+        <strong>CAD MODEL – Total Drive Height</strong>
+        <figure class="image-block">
+            <img
+                src="/assets/images/Section-1-Total-drive-height.png"
+                alt="Section-1-Total-drive-height"
+            >
+        </figure>
+      </div>
+      <div class="image-placeholder">
+        <strong>CAD MODEL – Bottom Drive Height</strong>
+        <figure class="image-block">
+            <img
+                src="/assets/images/Section-1-Drive-Height.png"
+                alt="Section-1-Drive-Height"
+            >
+        </figure>
       </div>
     </section>
 
@@ -309,12 +337,15 @@ image:
     <section id="problem-3">
       <h2><span>03</span>Loads &amp; Boundary Conditions (FEM)</h2>
       <p class="section-subtitle">Diagram communicating how loads and boundary conditions were applied in the finite element model.</p>
-
-      <div class="two-col">
-        <div>
-          <h3 style="font-size:0.95rem; margin-bottom:0.3rem;">Zero Displacement Boundary Condition</h3>
           <div class="image-placeholder">
             <strong>BOUNDARY CONDITION – FIXED DRIVE</strong>
+            <div class="image-placeholder">
+                <figure class="image-block">
+                    <img
+                        src="/assets/images/Zero-Displacement-BC.png"
+                        alt="Zero-Displacement-BC"
+                    >
+                </figure>
             Zero displacement applied to the top drive component of the torque wrench model.
           </div>
           <p>All translational degrees of freedom of the drive interface were constrained to simulate the wrench engaging a rigid fastener.</p>
@@ -323,6 +354,13 @@ image:
           <h3 style="font-size:0.95rem; margin-bottom:0.3rem;">Applied Force Load</h3>
           <div class="image-placeholder">
             <strong>LOAD – HANDLE FORCE</strong>
+            <div class="image-placeholder">
+                <figure class="image-block">
+                    <img
+                        src="/assets/images/Force-Load-BC.png"
+                        alt="Force-Load-BC"
+                    >
+                </figure>
             Force load applied to the handle component to generate the specified torque.
           </div>
           <p>The equivalent force corresponding to the applied torque was distributed over the handle grip region to replicate user input during operation.</p>
@@ -343,9 +381,8 @@ image:
                 alt="Normal-Strain-Contours-FEM-Improved-Design"
             >
         </figure>
-
+        Normal strain contours from the FEM analysis for the improved torque wrench design
       </div>
-      <p>Normal strain contours from the FEM analysis for the improved torque wrench design</p>
     </section>
 
     <!-- 5. Max Principal Stress Contours -->
@@ -360,8 +397,8 @@ image:
                 alt="Maximum-Principal-Stress-Contours-of-Improved-Design"
             >
         </figure>
+        Contour plot of maximum principal stress from the FEM analysis for the improved torque wrench design
       </div>
-      <p>Contour plot of maximum principal stress from the FEM analysis for the improved torque wrench design</p>
     </section>
 
     <!-- 6. FEM Results Summary -->
