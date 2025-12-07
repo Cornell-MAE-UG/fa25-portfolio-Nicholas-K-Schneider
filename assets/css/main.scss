@@ -8,3 +8,85 @@ $color_scheme: '{{ site.color_scheme }}';
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Merriweather:wght@400;700&display=swap');
 @import "custom";
 
+/* Overall container for the projects page */
+.gallery-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2.5rem 1.5rem;
+}
+
+/* Responsive grid for project cards */
+.project-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 1.75rem;
+}
+
+/* Individual project card */
+.gallery-item {
+  background: #0b1120;              /* tweak if your site is light-themed */
+  border-radius: 0.9rem;
+  border: 1px solid rgba(148, 163, 184, 0.35);
+  padding: 1rem 1rem 0.9rem;
+  text-align: center;
+  box-shadow: 0 18px 40px rgba(15, 23, 42, 0.7);
+  transition:
+    transform 0.18s ease-out,
+    box-shadow 0.18s ease-out,
+    border-color 0.18s ease-out;
+}
+
+.gallery-item a {
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* This is where the icon / preview image is sized */
+.gallery-item img {
+  width: 100%;
+  height: 210px;                    /* uniform thumbnail height */
+  object-fit: cover;                /* fills frame without distortion */
+  border-radius: 0.75rem;
+  display: block;
+  margin-bottom: 0.75rem;
+}
+
+/* Project title under thumbnail */
+.gallery-item p {
+  margin: 0;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #e5e7eb;
+}
+
+/* Hover effect for cards */
+.gallery-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 22px 55px rgba(15, 23, 42, 0.9);
+  border-color: rgba(56, 189, 248, 0.6);
+}
+
+@media (max-width: 640px) {
+  .gallery-container {
+    padding: 2rem 1rem;
+  }
+
+  .project-gallery {
+    gap: 1.25rem;
+  }
+
+  .gallery-item img {
+    height: 180px;
+  }
+}
+/* Fix sizing ONLY for MAE 3270 Final Project icon */
+.gallery-item img[src*="MAE3270-Final-Project-Deformation"] {
+  height: 180px !important;     /* slightly smaller height to avoid cropping */
+  object-fit: contain !important;
+  background: #0b1120;          /* subtle background behind empty space */
+  padding: 0.35rem;             /* adds breathing room */
+  border-radius: 0.75rem;
+}

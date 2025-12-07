@@ -3,7 +3,7 @@ layout: project
 title: MAE 3270 Final Portfolio Project
 description: Improved Design Model
 technologies: [Ansys, MATLAB, Fusion 360]
-image: 
+image: /assets/images/MAE3270-Final-Project-Deformation.png
 ---
 
 <!DOCTYPE html>
@@ -247,6 +247,12 @@ image:
         grid-template-columns: minmax(0, 1fr);
       }
     }
+    /* Hide Hero Image ONLY for MAE 3270 Final Project */
+    header img[src*="MAE3270-Final-Project-Deformation"] {
+        display: none !important;
+    }
+
+
   </style>
 </head>
 <body>
