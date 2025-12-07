@@ -22,9 +22,9 @@ To become a Mechanical and Aerospace Engineer
   *Bachelor of Science in Mechanical and Aerospace Engineering*  
   GPA: 3.8/4.0 | Graduation: Month, Year
 
-- **[High School Name]**  
+- **[Corning Painted-Post High School]**  
   *High School Diploma*  
-  Graduation: [Month, Year]
+  Graduation: [June, 2023]
 
 ---
 
