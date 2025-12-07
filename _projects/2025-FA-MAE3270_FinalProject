@@ -1,0 +1,449 @@
+---
+layout: project
+title: MAE 3270 Final Portfolio Project
+description: Improved Design Model
+technologies: [Ansys, MATLAB, Fusion 360]
+image: 
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Torque Wrench Design Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    :root {
+      --bg: #0f172a;
+      --bg-alt: #020617;
+      --card: #111827;
+      --accent: #38bdf8;
+      --accent-soft: rgba(56, 189, 248, 0.1);
+      --text-main: #e5e7eb;
+      --text-muted: #9ca3af;
+      --border-subtle: #1f2937;
+      --danger: #f97373;
+      --mono: "SF Mono", "JetBrains Mono", Menlo, Monaco, Consolas, monospace;
+      --sans: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: var(--sans);
+      background: radial-gradient(circle at top, #1e293b 0, var(--bg-alt) 55%);
+      color: var(--text-main);
+      line-height: 1.6;
+      padding: 2.5rem 1.25rem;
+    }
+
+    .container {
+      max-width: 960px;
+      margin: 0 auto;
+      background: linear-gradient(145deg, var(--bg-alt), #020617);
+      border-radius: 1.25rem;
+      border: 1px solid var(--border-subtle);
+      box-shadow:
+        0 30px 80px rgba(15, 23, 42, 0.9),
+        0 0 0 1px rgba(15, 23, 42, 0.8);
+      padding: 2.5rem clamp(1.75rem, 4vw, 3rem);
+    }
+
+    header {
+      border-bottom: 1px solid var(--border-subtle);
+      padding-bottom: 1.75rem;
+      margin-bottom: 2rem;
+    }
+
+    header h1 {
+      font-size: clamp(1.8rem, 3vw, 2.2rem);
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: #f9fafb;
+    }
+
+    header p {
+      margin-top: 0.4rem;
+      color: var(--text-muted);
+      font-size: 0.95rem;
+    }
+
+    .badge-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-top: 0.75rem;
+    }
+
+    .badge {
+      font-size: 0.7rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 0.35rem 0.6rem;
+      border-radius: 999px;
+      border: 1px solid var(--accent-soft);
+      background: radial-gradient(circle at top left, var(--accent-soft), transparent);
+      color: #e0f2fe;
+    }
+
+    section {
+      border-radius: 1rem;
+      border: 1px solid var(--border-subtle);
+      background: radial-gradient(circle at top left, rgba(56, 189, 248, 0.06), var(--card));
+      padding: 1.5rem 1.4rem;
+      margin-bottom: 1.25rem;
+    }
+
+    section h2 {
+      font-size: 1.1rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 0.85rem;
+      color: #e5f3ff;
+    }
+
+    section h2 span {
+      font-size: 0.78rem;
+      color: var(--accent);
+      margin-right: 0.5rem;
+    }
+
+    .section-subtitle {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      margin-bottom: 0.75rem;
+    }
+
+    p {
+      font-size: 0.95rem;
+      margin-bottom: 0.6rem;
+    }
+
+    ul {
+      margin-left: 1.25rem;
+      margin-bottom: 0.5rem;
+    }
+
+    li {
+      margin-bottom: 0.3rem;
+    }
+
+    .image-placeholder {
+      border-radius: 0.75rem;
+      border: 1px dashed rgba(148, 163, 184, 0.7);
+      background: radial-gradient(circle at top left, rgba(51, 65, 85, 0.7), rgba(15, 23, 42, 0.9));
+      padding: 1rem;
+      margin: 0.75rem 0;
+      text-align: center;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      font-family: var(--mono);
+    }
+
+    .image-placeholder strong {
+      display: block;
+      color: #e5e7eb;
+      margin-bottom: 0.25rem;
+    }
+    figure.image-block img {
+        display: block;
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        border-radius: 0.6rem;
+        border: 1px solid rgba(15, 23, 42, 0.9);
+    }
+
+    .two-col {
+      display: grid;
+      grid-template-columns: minmax(0, 1.1fr) minmax(0, 1.1fr);
+      gap: 1.25rem;
+      align-items: flex-start;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      border-radius: 0.75rem;
+      overflow: hidden;
+      margin-top: 0.5rem;
+      font-size: 0.9rem;
+    }
+
+    th, td {
+      padding: 0.55rem 0.65rem;
+      border-bottom: 1px solid #1f2937;
+    }
+
+    th {
+      text-align: left;
+      background: rgba(15, 23, 42, 0.9);
+      color: #bfdbfe;
+      font-weight: 500;
+    }
+
+    tr:nth-child(even) td {
+      background: rgba(15, 23, 42, 0.6);
+    }
+
+    code, .mono {
+      font-family: var(--mono);
+      font-size: 0.85rem;
+    }
+
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 0.2rem 0.6rem;
+      border-radius: 999px;
+      border: 1px solid rgba(148, 163, 184, 0.4);
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      margin-top: 0.3rem;
+    }
+
+    .pill-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 999px;
+      background: var(--accent);
+      box-shadow: 0 0 0 4px rgba(56, 189, 248, 0.25);
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .highlight-box {
+      margin-top: 0.75rem;
+      padding: 0.7rem 0.8rem;
+      border-radius: 0.75rem;
+      border: 1px solid rgba(56, 189, 248, 0.3);
+      background: rgba(15, 23, 42, 0.8);
+      font-size: 0.85rem;
+      color: #e5e7eb;
+    }
+
+    .highlight-box strong {
+      color: #bae6fd;
+    }
+
+    @media (max-width: 720px) {
+      .container {
+        padding: 1.6rem 1.2rem;
+      }
+
+      .two-col {
+        grid-template-columns: minmax(0, 1fr);
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="container">
+    <header>
+      <h1>Torque Wrench Design &amp; FEM Analysis</h1>
+      <p>Finite element analysis, material selection, and instrumentation for a titanium torque wrench handle.</p>
+      <div class="badge-row">
+        <span class="badge">FEM</span>
+        <span class="badge">Titanium Grade 4</span>
+        <span class="badge">Strain Gauge Design</span>
+      </div>
+    </header>
+
+    <!-- 1. CAD Images -->
+    <section id="problem-1">
+      <h2><span>01</span>CAD Model Images</h2>
+      <p class="section-subtitle">Image(s) of the CAD model showing all key dimensions of the torque wrench handle and drive assembly.</p>
+
+      <!-- Replace these placeholders with <img> tags in your project -->
+      <div class="image-placeholder">
+        <strong>CAD MODEL – OVERALL GEOMETRY</strong>
+        Replace this box with an exported CAD image (e.g., <code>&lt;img src="cad_overview.png" alt="CAD model overview"&gt;</code>).
+      </div>
+      <div class="image-placeholder">
+        <strong>CAD MODEL – DIMENSIONED VIEW</strong>
+        Include a view with all critical dimensions (length <span class="mono">L</span>, width <span class="mono">h</span>, thickness <span class="mono">b</span>, gauge radius <span class="mono">c</span>, etc.).
+      </div>
+    </section>
+
+    <!-- 2. Material & Properties -->
+    <section id="problem-2">
+      <h2><span>02</span>Material &amp; Mechanical Properties</h2>
+      <p><strong>Material:</strong> Titanium, commercial purity, Grade 4.</p>
+      <p>The following table summarizes the key geometric parameters and mechanical properties used in the analysis:</p>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Parameter</th>
+            <th>Value</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Applied Torque, <span class="mono">M</span></td><td>600 in-lbf</td></tr>
+          <tr><td>Length, <span class="mono">L</span></td><td>18 in</td></tr>
+          <tr><td>Width, <span class="mono">h</span></td><td>0.5 in</td></tr>
+          <tr><td>Thickness, <span class="mono">b</span></td><td>0.6 in</td></tr>
+          <tr><td>Gauge Radius, <span class="mono">c</span></td><td>1.0 in</td></tr>
+          <tr><td>Young’s Modulus, <span class="mono">E</span></td><td>15.2 × 10<sup>6</sup> psi</td></tr>
+          <tr><td>Poisson’s Ratio, <span class="mono">ν</span></td><td>0.27</td></tr>
+          <tr><td>Tensile Strength</td><td>100 × 10<sup>3</sup> psi</td></tr>
+          <tr><td>Fracture Toughness</td><td>45.5 × 10<sup>3</sup> psi·√in</td></tr>
+          <tr><td>Fatigue Strength</td><td>59.2 × 10<sup>3</sup> psi</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- 3. Loads & Boundary Conditions -->
+    <section id="problem-3">
+      <h2><span>03</span>Loads &amp; Boundary Conditions (FEM)</h2>
+      <p class="section-subtitle">Diagram communicating how loads and boundary conditions were applied in the finite element model.</p>
+
+      <div class="two-col">
+        <div>
+          <h3 style="font-size:0.95rem; margin-bottom:0.3rem;">Zero Displacement Boundary Condition</h3>
+          <div class="image-placeholder">
+            <strong>BOUNDARY CONDITION – FIXED DRIVE</strong>
+            Zero displacement applied to the top drive component of the torque wrench model.
+          </div>
+          <p>All translational degrees of freedom of the drive interface were constrained to simulate the wrench engaging a rigid fastener.</p>
+        </div>
+        <div>
+          <h3 style="font-size:0.95rem; margin-bottom:0.3rem;">Applied Force Load</h3>
+          <div class="image-placeholder">
+            <strong>LOAD – HANDLE FORCE</strong>
+            Force load applied to the handle component to generate the specified torque.
+          </div>
+          <p>The equivalent force corresponding to the applied torque was distributed over the handle grip region to replicate user input during operation.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. Normal Strain Contours -->
+    <section id="problem-4">
+      <h2><span>04</span>Normal Strain Contours (Gauge Direction)</h2>
+      <p class="section-subtitle">Normal strain contours in the strain gauge direction for the improved design.</p>
+
+      <div class="image-placeholder">
+        <strong>Normal Strain Contours – Improved Design</strong><br>
+        <figure class="image-block">
+            <img
+                src="/assets/images/Normal-Strain-Contours-FEM-Improved-Design.png"
+                alt="Normal-Strain-Contours-FEM-Improved-Design"
+            >
+        </figure>
+
+      </div>
+      <p>Normal strain contours from the FEM analysis for the improved torque wrench design</p>
+    </section>
+
+    <!-- 5. Max Principal Stress Contours -->
+    <section id="problem-5">
+      <h2><span>05</span>Maximum Principal Stress Contours</h2>
+      
+      <div class="image-placeholder">
+        <strong>MAX PRINCIPAL STRESS – IMPROVED DESIGN</strong>
+        <figure class="image-block">
+            <img
+                src="/assets/images/Maximum-Principal-Stress-Contours-of-Improved-Design.png"
+                alt="Maximum-Principal-Stress-Contours-of-Improved-Design"
+            >
+        </figure>
+      </div>
+      <p>Contour plot of maximum principal stress from the FEM analysis for the improved torque wrench design</p>
+    </section>
+
+    <!-- 6. FEM Results Summary -->
+    <section id="problem-6">
+      <h2><span>06</span>FEM Results Summary</h2>
+      <p class="section-subtitle">Summary of key outputs from the finite element model: stresses, deflection, and local strains.</p>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Quantity</th>
+            <th>Result</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Maximum Normal Stress (anywhere)</td>
+            <td>129.08 ksi</td>
+          </tr>
+          <tr>
+            <td>Normal Stress at Probe Location</td>
+            <td>22.667 ksi</td>
+          </tr>
+          <tr>
+            <td>Load Point Deflection</td>
+            <td>0.79059 in</td>
+          </tr>
+          <tr>
+            <td>Strains at Gauge Location [x, y, z]</td>
+            <td>[-0.43243, -0.43254, 1.4913] millistrain (×10<sup>-3</sup>)</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="highlight-box">
+        <strong>Note:</strong> Strain values are reported in millistrain (e-3). The local strain field at the gauge location is used directly in the sensitivity calculation and gauge selection.
+      </div>
+    </section>
+
+    <!-- 7. Torque Wrench Sensitivity -->
+    <section id="problem-7">
+      <h2><span>07</span>Torque Wrench Sensitivity</h2>
+      <p class="section-subtitle">Sensitivity in mV/V derived from FEM-based strain predictions at the gauge location.</p>
+
+      <p>The torque wrench sensitivity based on the FEM strains and selected instrumentation is:</p>
+      <p style="font-size:1.05rem; margin-top:0.4rem;">
+        <strong>Torque Wrench Sensitivity:</strong>
+        <span class="mono">0.15 mV/V</span>
+      </p>
+      <div class="pill">
+        <span class="pill-dot"></span>
+        <span>Computed from FEM strain at gauge location and bridge configuration.</span>
+      </div>
+    </section>
+
+    <!-- 8. Strain Gauge Selection -->
+    <section id="problem-8">
+      <h2><span>08</span>Strain Gauge Selection</h2>
+      <p class="section-subtitle">Selected strain gauge type, key dimensions, and compatibility with the improved torque wrench geometry.</p>
+
+      <p><strong>Selected Gauge:</strong> Dwyer Omega linear strain gauge</p>
+      <p><strong>Model:</strong> <span class="mono">SGD-2-350-LY11</span></p>
+      <p><strong>Product Link:</strong> <a href="https://www.dwyeromega.com/en-us/linear-strain-gages/SGD-LINEAR1-AXIS/p/SGD-2-350-LY11" target="_blank" rel="noopener noreferrer">Dwyer Omega – SGD-2-350-LY11</a></p>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Gauge Parameter</th>
+            <th>Value</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Grid Length</td><td>2 mm</td></tr>
+          <tr><td>Grid Length Range</td><td>3 mm</td></tr>
+          <tr><td>Grid Width</td><td>2.5 mm</td></tr>
+        </tbody>
+      </table>
+
+      <p style="margin-top:0.7rem;">
+        These dimensions satisfy the system and design requirements, providing sufficient bonding area on the improved torque wrench geometry while remaining compatible with the expected strain levels obtained from the FEM analysis.
+      </p>
+    </section>
+  </main>
+</body>
+</html>

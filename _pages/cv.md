@@ -20,11 +20,11 @@ To become a Mechanical and Aerospace Engineer
 #### Education
 - **Cornell University**  
   *Bachelor of Science in Mechanical and Aerospace Engineering*  
-  GPA: 3.8/4.0 | Graduation: Month, Year
+  GPA: 3.8/4.0 | Graduation: May, 2027
 
-- **[Corning Painted-Post High School]**  
+- **Corning Painted-Post High School**  
   *High School Diploma*  
-  Graduation: [June, 2023]
+  Graduation: June, 2023
 
 ---
 
