@@ -277,16 +277,17 @@ image: /assets/images/MAE3270-Final-Project-Deformation.png
         <strong>CAD MODEL – Base & Height of Handle</strong>
         <figure class="image-block">
             <img
-                src="/assets/images/Section-1-Base-Section-2-Height.png"
+                src="{{ '/assets/images/Section-1-Base-Section-2-Height.png' | relative_url }}"
                 alt="Section-1-Base-Section-2-Height"
-            >
+            />
+
         </figure>
       </div>
       <div class="image-placeholder">
         <strong>CAD MODEL – Handle Length (L = 18 in) with 1 inch added</strong>
         <figure class="image-block">
             <img
-                src="/assets/images/Section-1-Handle-Length.png"
+                src="{{ '/assets/images/Section-1-Handle-Length.png' | relative_url }}"
                 alt="Section-1-Handle-Length"
             >
         </figure>
@@ -295,8 +296,9 @@ image: /assets/images/MAE3270-Final-Project-Deformation.png
         <strong>CAD MODEL – Total Drive Height</strong>
         <figure class="image-block">
             <img
-                src="/assets/images/Section-1-Total-drive-height.png"
+                src="{{ '/assets/images/Section-1-Total-drive-height.png' | relative_url }}"
                 alt="Section-1-Total-drive-height"
+                
             >
         </figure>
       </div>
@@ -304,7 +306,7 @@ image: /assets/images/MAE3270-Final-Project-Deformation.png
         <strong>CAD MODEL – Bottom Drive Height</strong>
         <figure class="image-block">
             <img
-                src="/assets/images/Section-1-Drive-Height.png"
+                src="{{ '/assets/images/Section-1-Drive-Height.png' | relative_url }}"
                 alt="Section-1-Drive-Height"
             >
         </figure>
@@ -348,7 +350,7 @@ image: /assets/images/MAE3270-Final-Project-Deformation.png
             <div class="image-placeholder">
                 <figure class="image-block">
                     <img
-                        src="/assets/images/Zero-Displacement-BC.png"
+                        src="{{ '/assets/images/Zero-Displacement-BC.png' | relative_url }}"
                         alt="Zero-Displacement-BC"
                     >
                 </figure>
@@ -363,7 +365,7 @@ image: /assets/images/MAE3270-Final-Project-Deformation.png
             <div class="image-placeholder">
                 <figure class="image-block">
                     <img
-                        src="/assets/images/Force-Load-BC.png"
+                        src="{{ '/assets/images/Force-Load-BC.png' | relative_url }}"
                         alt="Force-Load-BC"
                     >
                 </figure>
@@ -383,7 +385,7 @@ image: /assets/images/MAE3270-Final-Project-Deformation.png
         <strong>Normal Strain Contours – Improved Design</strong><br>
         <figure class="image-block">
             <img
-                src="/assets/images/Normal-Strain-Contours-FEM-Improved-Design.png"
+                src="{{ '/assets/images/Normal-Strain-Contours-FEM-Improved-Design.png' | relative_url }}"
                 alt="Normal-Strain-Contours-FEM-Improved-Design"
             >
         </figure>
@@ -399,7 +401,7 @@ image: /assets/images/MAE3270-Final-Project-Deformation.png
         <strong>MAX PRINCIPAL STRESS – IMPROVED DESIGN</strong>
         <figure class="image-block">
             <img
-                src="/assets/images/Maximum-Principal-Stress-Contours-of-Improved-Design.png"
+                src="{{ '/assets/images/Maximum-Principal-Stress-Contours-of-Improved-Design.png' | relative_url }}"
                 alt="Maximum-Principal-Stress-Contours-of-Improved-Design"
             >
         </figure>
