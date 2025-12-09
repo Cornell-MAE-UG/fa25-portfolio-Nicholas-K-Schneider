@@ -270,7 +270,7 @@ image: /assets/images/747-Wallpaper.jpg
 
     <!-- 2. Simulation & Report -->
     <section id="report">
-      <h2><span>04</span>Simulation Results & Report</h2>
+      <h2><span>02</span>Simulation Results & Report</h2>
       <p class="section-subtitle">
         The full technical write-up, including pitch controller equations, controller derivation, and simulation plots,
         is provided in the project report.
@@ -287,7 +287,7 @@ image: /assets/images/747-Wallpaper.jpg
         <!-- TODO: update the href below with your actual PDF path -->
         <a
           class="pdf-link"
-          href="{{ '/assets/reports/747-400-pitch-controller-report.pdf' | relative_url }}"
+          href="{{ '/assets/MAE3260-final-groupwork-report.pdf' | relative_url }}"
           target="_blank"
           rel="noopener noreferrer"
         >
