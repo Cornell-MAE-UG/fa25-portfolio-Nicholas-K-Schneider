@@ -240,21 +240,31 @@ image: /assets/images/747-Wallpaper.jpg
       </figure>
       <h2><span>01</span>Overview</h2>
       <p>
-        This project develops a pitch control system for a Boeing 747-400, starting from
-        a linearized longitudinal dynamics model. The goal is to regulate the aircraft’s
-        pitch attitude and flight path angle while satisfying stability, tracking, and
-        passenger comfort constraints. The controller was implemented and tested in
-        MATLAB/Simulink using step responses and disturbance rejection scenarios.
         This project was done as the final groupwork assigment for my System Dynamics class - MAE 3260.
         We designed a ptich controller for a Boeing 747-400 Aircraft by:
-        1. Publically avalaible geometric data for the Aircraft was used to quanitfy the forces acting on the
-        aircraft at cruising flight at an alititude of 35,000 ft.
-        2. Finding the transfer functions for the geometric and pitch properties using Laplace transforms
-        to define a state-space model of the system.
-        3. Created a MATLAB script to calcualte all coefficients and matrices used in modeling system behavior.
-        4. Simulink was used to model a PID controller to meet our performance design requirements.
       </p>
 
+      <ul>
+        <li>
+          Using publicly available geometric and aerodynamic data to quantify forces acting
+          on the aircraft in steady, level cruise at an altitude of 35,000 ft.
+        </li>
+
+        <li>
+          Deriving the transfer functions governing pitch dynamics using Laplace transforms
+          and assembling a state-space model of the aircraft.
+        </li>
+
+        <li>
+          Developing a MATLAB script to compute all aerodynamic coefficients, stability
+          derivatives, and system matrices required for dynamic analysis.
+        </li>
+
+        <li>
+          Designing and tuning a PID-based pitch controller in Simulink to meet performance
+          requirements for stability, overshoot, settling time, and control effort.
+        </li>
+      </ul>
       
     </section>
 
