@@ -280,10 +280,6 @@ image: /assets/images/747-Wallpaper.jpg
         <div class="pdf-card-title">
           747-400 Pitch Controller – Final Report (PDF)
         </div>
-        <div class="pdf-meta">
-          Add your full write-up here, including model derivation, controller design, stability analysis,
-          and time-domain simulation results.
-        </div>
         <!-- TODO: update the href below with your actual PDF path -->
         <a
           class="pdf-link"
