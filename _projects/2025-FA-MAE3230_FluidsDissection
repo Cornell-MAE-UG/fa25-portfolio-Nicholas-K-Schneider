@@ -203,7 +203,7 @@ image: /assets/images/Fluid-Dissection-Hero.jpeg
       <!-- Replace VIDEO_ID with your YouTube ID -->
       <div class="video-wrapper">
         <iframe
-          src="https://www.youtube.com/watch?v=kFJW_DP0QBg&feature=youtu.be"
+          src="https://www.youtube.com/embed/kFJW_DP0QBg"
           title="In-Class Project Video"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowfullscreen>
